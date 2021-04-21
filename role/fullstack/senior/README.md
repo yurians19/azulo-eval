@@ -1,0 +1,9 @@
+# Azulo: Evaluación para el rol fullstack senior
+## Instrucciones
+1. Crear una carpeta 'role/fullstack/senior/[gitusername]' reemplazando '[gitusername]' por el nombre de usuario del candidato en GitHub.
+1. Favor realizar todos sus cambios dentro de esta carpeta. Por favor no realice cambios en archivos fuera de esta carpeta, ni tampoco agregue otras carpetas fuera de esta.
+1. El resultado de su evaluación debe ser un ejemplo autosuficiente y autocontenido. Para compilar y construir los productos debe incluir instrucciones suficientes para levantar el ambiente de ejemplo sin necesidad de corregir errores o instalar productos no mencionados en las instrucciones.
+1. Docker debe ser el producto básico del ejemplo y todos los demás productos deben estar basados en el mismo. Toda instancia de un producto que sea producida por el ejemplo a ser evaluado debe ejecutarse dentro de un contenedor de Docker. Si alguno de los productos de su ejemplo de evaluación no está configurado para correr como un contenedor en Docker, esto se reflejará negativamente en su evaluación. Si no ha usado Docker con anterioridad en un ambiente de desarrollo, siéntase libre de investigar y aprender cuanto tiempo considere necesario, pero recuerde enviar cada día una actualización al servidor, ya sea con el avance, aunque sea parcial, de su ejemplo, o con anotaciones recopiladas durante su sesión de estudio y aprendizaje de la tecnología.
+1. Siempre que las instrucciones mencionen la creación, configuración o el levantado de un contenedor, estas harán referencia a un contenedor de Docker.
+1. Todo proceso de compilación y construcción de código debe ser ejecutado dentro de un contenedor. La máquina anfitriona no debe tener necesidad de instalar o correr otras herramientas que no sea Docker en si mismo.
+1. Herramientas de manejo de paquetes como npm, yarn, entre otras, deben ser instaladas y ejecutas dentro del contenedor de forma autosuficiente y autocontenida.
