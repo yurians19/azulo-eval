@@ -3,18 +3,14 @@
 1. Crear una carpeta 'role/fullstack/senior/[gitusername]' reemplazando '[gitusername]' por el nombre de usuario del candidato en GitHub.
 1. Favor realizar todos sus cambios dentro de esta carpeta. Por favor no realice cambios en archivos fuera de esta carpeta, ni tampoco agregue otras carpetas fuera de esta.
 1. El resultado de su evaluación debe ser un ejemplo autosuficiente y autocontenido. Para compilar y construir los productos debe incluir instrucciones suficientes para levantar el ambiente de ejemplo sin necesidad de corregir errores o instalar productos no mencionados en las instrucciones.
-1. Docker debe ser el producto básico del ejemplo y todos los demás productos deben estar basados en el mismo. Toda instancia de un producto que sea producida por el ejemplo a ser evaluado debe ejecutarse dentro de un contenedor de Docker. Si alguno de los productos de su ejemplo de evaluación no está configurado para correr como un contenedor en Docker, esto se reflejará negativamente en su evaluación. Si no ha usado Docker con anterioridad en un ambiente de desarrollo, siéntase libre de investigar y aprender cuanto tiempo considere necesario, pero recuerde enviar cada día una actualización al servidor, ya sea con el avance, aunque sea parcial, de su ejemplo, o con anotaciones recopiladas durante su sesión de estudio y aprendizaje de la tecnología.
-1. Siempre que las instrucciones mencionen la creación, configuración o el levantado de un contenedor, estas harán referencia a un contenedor de Docker.
-1. Todo proceso de compilación y construcción de código debe ser ejecutado dentro de un contenedor. La máquina anfitriona no debe tener necesidad de instalar o correr otras herramientas que no sea Docker en si mismo.
-1. Herramientas de manejo de paquetes como npm, yarn, entre otras, deben ser instaladas y ejecutas dentro del contenedor de forma autosuficiente y autocontenida.
+1. Herramientas de manejo de paquetes como npm, yarn, entre otras, deben ser instaladas y ejecutas de forma autosuficiente y autocontenida, sin necesidad de cambios.
 1. Después de leer con detenimiento este archivo, se espera que antes de iniciar al trabajo el candidato envíe un estimado de las horas/hombre que le tomará realizarlas, y de acuerdo a su disponibilidad de horas diarias para realizar esta prueba, en cuantos días calendario se traduce ese estimado. Si el estimado no es recibido por el candidato el mismo día que se envía la prueba, se descartará su solicitud.
 1. Al final hay una lista de tareas marcadas como "*Extra*." Aunque no es requerido realizar todas estas tareas, hacerlo se reflejará positivamente en su evaluación. El candidato debe también decidir cuales tareas extra va a realizar después de su evaluación inicial e incluirlas en el estimado descrito en el punto anterior. Junto con el estimado, el candidato debe mencionar cuales tareas extra se compromete a realizar.
 1. Se espera que un candidato senior realice al menos dos tareas extra a elegir, aunque más tareas extra se reflejarán positivamente en su evaluación.
 ## Tareas
-1. Desplegar una imagen de MySQL usando docker-compose.
-1. Desplegar una imagen de Adminer usando docker-compose, la cual se conecte al contenedor de MySQL que fue desplegado en la tarea #1.
-1. Desplegar una imagen de Directus usando docker-compose, la cual se conecte al contenedor de MySQL que fue desplegado en la tarea #1.
-1. Desplegar una imagen de Flyway usando docker-compose, la cual se conecte al contenedor de MySQL y cree por medio de un archivo de migración las siguientes tablas, usando los tipos de datos que considere convenientes:
+1. Desplegar una base de datos de MySQL.
+1. Desplegar una instancia de Directus, la cual se conecte al contenedor de MySQL que fue desplegado en la tarea #1.
+1. Desplegar una instancia de Flyway, la cual se conecte al contenedor de MySQL y cree por medio de un archivo de migración las siguientes tablas, usando los tipos de datos que considere convenientes:
     1. Location
         1. Id
         1. Country
@@ -33,8 +29,9 @@
         1. PriorityOrder (entero que representa el orden de prioridad)
 1. Crear un nuevo archivo de migración que genere datos de prueba para cada una de las tablas, con al menos 10 registros en cada tabla. Los contenidos quedan a discreción del participante.
 1. Crear un proyecto de vue.js usando TypeScript usando el nombre "airportart-web"
-1. Desplegar una imagen de node para compilar y construir el proyecto de vue.js usando docker-compose.
-1. Usando la capacidad de docker de crear compilaciones de multiple estado (multi-stage builds), modificar el archivo de Docker creado en el paso anterior para desplegar una imagen de nginx que exponga la aplicación "airportart-web" que fue creada en pasos anteriores usando el puerto 36949.
+1. Crear un proyecto de node.js usando TypeScript usando el nombre "airportart-api"
+1. Crear un endpoint en node.js que permita mover aeropuertos de un operador a otro.
+1. Crear un endpoint en node.js que permita actualizar el orden de prioridad de dos o más aeropuertos de forma simultánea.
 1. Actualizar la aplicación "airportart-web" para que se conecte al API de Directus corriendo en un contenedor de docker y muestre una lista de los aeropuertos, desplegando para cada aeropuerto una tarjeta de 160x80px que contenga la siguiente información:
     1. {{Airport.AirportCode}} - {{Airport.Name}}
     1. {{Location.ProvinceOrState}}, {{Location.Country}}
@@ -47,6 +44,12 @@
 1. Si el tamaño del navegador está entre 721px y 1280px de ancho, la página debe tener márgenes a la izquierda y derecha de 90px y márgenes arriba y abajo de 200px.
 1. Si el tamaño del navegador excede los 1280px de ancho, la grilla (grid) debe mantenerse a un máximo de 1280px de ancho, centrada en el espacio disponible, con márgenes a la izquierda y derecha de 90px y márgenes arriba y abajo de 200px. El espacio fuera de los márgenes que exceda los 1280px debe ser de color gris claro (#EEEEEE).
 1. Todos los textos de la página deben usar la tipografía OpenSans
+1. *Extra*: Crear un archivo de docker que despliegue MySQL.
+1. *Extra*: Crear un archivo de docker que despliegue Directus.
+1. *Extra*: Crear un archivo de docker que despliegue FlyWay.
+1. *Extra*: Crear un archivo de docker que despliegue el API "airportart-api".
+1. *Extra*: Crear un archivo de docker que despliegue el web "airportart-web".
+1. *Extra*: Crear un archivo de docker-compose que combine todos los archivos de docker en un solo sistema de contenedores conectados.
 1. *Extra*: Dibujar un borde y sombreado difuminado alrededor de las tarjetas.
 1. *Extra*: Crear otras 3 tablas a discreción del candidato con más detalle acerca del aeropuerto. El detalle puede incluir, por ejemplo un listado de vuelos.
 1. *Extra*: Agregar una migración que llene datos de prueba en todas las tablas con al menos 1000 registros en cada una.
