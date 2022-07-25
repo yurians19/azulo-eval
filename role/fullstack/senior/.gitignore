@@ -1,2 +1,4 @@
 # Se ignora ya que contiene todas las variables de configuracion respectivas como claves de conexion a base de datos.
 .env
+# Se ignora Archivos creados en el entorno MAC OS.
+.DS_Store
