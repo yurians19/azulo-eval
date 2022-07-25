@@ -1,0 +1,23 @@
+# Archivo de configuracion para crear la instancion de directus en un contenedor docker
+version: '3'
+services:
+  directus:
+    container_name: directus
+    image: directus/directus:latest
+    ports:
+      - 8055:8055
+    volumes:
+      - ./uploads:/directus/uploads
+    environment:
+      KEY: '${DIRECTUS_ADMIN_KEY}'
+      SECRET: '${DIRECTUS_ADMIN_SECRET}'
+
+      DB_CLIENT: 'mysql'
+      DB_HOST: 'database'
+      DB_PORT: '${MYSQL_PORT}'
+      DB_DATABASE: '${MYSQL_DATABASE}'
+      DB_USER: '${MYSQL_USER}'
+      DB_PASSWORD: '${MYSQL_PASSWORD}'
+
+      ADMIN_EMAIL: '${DIRECTUS_ADMIN_EMAIL}'
+      ADMIN_PASSWORD: '${DIRECTUS_ADMIN_PASSWORD}'
