@@ -1,0 +1,4 @@
+# Archivo para ignorar carpetas que no deben ir a los contenedores docker
+node_modules
+npm-debug.log
+dist

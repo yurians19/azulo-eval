@@ -2,3 +2,19 @@
 .env
 # Se ignora Archivos creados en el entorno MAC OS.
 .DS_Store
+
+# dependencies
+node_modules/
+
+# IDE
+/.idea
+/.awcache
+/.vscode
+/.devcontainer
+*.code-workspace
+
+# archivos compilados
+dist/
+
+# archivos generados
+uploads/

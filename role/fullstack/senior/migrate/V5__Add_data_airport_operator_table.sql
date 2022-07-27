@@ -1,5 +1,5 @@
--- Poblado de la tabla airport_operator
-INSERT INTO airport_operator
+-- Poblado de la tabla AirportOperator
+INSERT INTO AirportOperator
     (name)
 VALUES
     ('Pedro Perez'),

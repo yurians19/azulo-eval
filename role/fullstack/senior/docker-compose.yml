@@ -29,3 +29,15 @@ services:
       MYSQL_USER: "${MYSQL_USER}"
       MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
       MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
+  api:
+    container_name: api-test
+    image: api-test
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on: 
+      - database
+    ports:
+      - "3001:3001"
+    volumes: 
+      - .:/usr/src/app
