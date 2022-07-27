@@ -22,6 +22,7 @@ export class Airport {
 
   @Column({
     type: "enum",
+    name: "priorityOrder", 
     enum: priorityOrderAirport,
     default: priorityOrderAirport.SHORT
   })

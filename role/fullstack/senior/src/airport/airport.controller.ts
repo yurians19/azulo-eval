@@ -79,9 +79,7 @@ export class AirportController {
   @ApiResponse(getResponseInvalid)
   @ApiNotFoundResponse(apiNotFoundResponse)
   async updateOrderPriorityByIds(@Query('priorityOrder') priorityOrder, @Body('airportIds') airportIds, @Req() req, @Res() res) {
-    console.log(airportIds,priorityOrder);
-
-    const airport = await this.airportService.updateAirportOperatorById({priorityOrder,airportIds})
+    const airport = await this.airportService.updateOrderPriorityByIds({priorityOrder,airportIds})
 
     if (!airport) {
       throw new HttpException(httpExceptionNotFound, HttpStatus.NOT_FOUND);

@@ -2,13 +2,13 @@
 INSERT INTO airport
     (name,airportOperatorId,airportCode,locationId,priorityOrder)
 VALUES
-    ('usa',3,'123234343434',2,'SHORT'),
-    ('usa',2,'123234343434',1,'SHORT'),
-    ('usa',6,'123234343434',3,'SHORT'),
-    ('usa',2,'123234343434',4,'SHORT'),
-    ('usa',3,'123234343434',4,'SHORT'),
-    ('usa',1,'123234343434',1,'HIGH'),
-    ('usa',6,'123234343434',6,'HIGH'),
-    ('usa',4,'123234343434',2,'HIGH'),
-    ('usa',3,'123234343434',3,'HIGH'),
-    ('usa',2,'123234343434',2,'MEDIUM');
+    ('areopuerto 1',3,'123234343434',2,'SHORT'),
+    ('areopuerto 2',2,'123234343434',1,'SHORT'),
+    ('areopuerto 3',6,'123234343434',3,'SHORT'),
+    ('areopuerto 4',2,'123234343434',4,'SHORT'),
+    ('areopuerto 5',3,'123234343434',4,'SHORT'),
+    ('areopuerto 6',1,'123234343434',1,'HIGH'),
+    ('areopuerto 7',6,'123234343434',6,'HIGH'),
+    ('areopuerto 8',4,'123234343434',2,'HIGH'),
+    ('areopuerto 9',3,'123234343434',3,'HIGH'),
+    ('areopuerto 10',2,'123234343434',2,'MEDIUM');

@@ -1,1 +1,1 @@
-export * from './filesDocument.interfaces'
+export * from './updatePriorityOrderMany.interfaces'
